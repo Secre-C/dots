@@ -1,5 +1,6 @@
 # environment variabls
 export EDITOR=nvim
+export PATH=$PATH:~/bin
 
 # aliases
 alias ls='ls --color=auto'
