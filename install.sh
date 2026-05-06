@@ -31,7 +31,7 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 
 # enable wake-on-lan
-sudo ethtool -s enp6s0 wol g
+# sudo ethtool -s enp6s0 wol g
 
 # enable ssh
 sudo systemctl enable --now ssh
