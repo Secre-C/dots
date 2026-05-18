@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-packages="neovim kitty zsh libreoffice btop mpv qbittorrent qalculate-qt wine openrgb ethtool openssh"
+packages="neovim kitty zsh libreoffice btop mpv qbittorrent qalculate-qt wine openrgb ethtool openssh tldr"
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 cd $SCRIPT_DIR
@@ -35,4 +35,3 @@ sudo udevadm trigger
 
 # enable ssh
 sudo systemctl enable --now ssh
-
