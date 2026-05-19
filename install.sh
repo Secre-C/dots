@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-packages="neovim kitty zsh libreoffice btop mpv qbittorrent qalculate-qt wine openrgb ethtool openssh tldr"
+packages="neovim kitty zsh libreoffice btop mpv qbittorrent qalculate-qt wine openrgb ethtool openssh tldr git"
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 cd $SCRIPT_DIR
@@ -21,10 +21,16 @@ sudo chsh -s $(which zsh)
 curl -s https://ohmyposh.dev/install.sh | bash -s
 oh-my-posh font install firacode
 
+#install zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+
 # copy config files
 sudo cp -r .config ~/
 sudo cp -r rules.d /etc/udev/
 sudo cp .zshrc ~/.zshrc
+
+# source zshrc
+source ~/.zshrc
 
 # reload udev rules
 sudo udevadm control --reload-rules
