@@ -1,6 +1,7 @@
 # environment variabls
 export EDITOR=nvim
 export PATH=$PATH:~/bin:~/.local/bin
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
 
 # save history
 HISTFILE=~/.zsh_history
