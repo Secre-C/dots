@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-packages="neovim kitty zsh libreoffice btop mpv qbittorrent qalculate-qt wine openrgb ethtool openssh tldr git"
+packages="neovim kitty zsh libreoffice btop mpv qbittorrent qalculate-qt wine openrgb ethtool openssh tldr git topgrade"
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 cd $SCRIPT_DIR
@@ -13,6 +13,9 @@ elif command -v pacman; then
 elif command -v apt; then
     sudo apt update & sudo apt install $packages
 fi
+
+# Topgrade
+topgrade -y
 
 # set shell to zsh
 sudo chsh -s $(which zsh)
