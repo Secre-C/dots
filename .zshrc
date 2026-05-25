@@ -1,13 +1,16 @@
 # environment variabls
 export EDITOR=nvim
 export PATH=$PATH:~/bin:~/.local/bin
-export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+export SSH_AUTH_SOCK=~/.bitwarden-ssh-agent.sock
 
 # save history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=1000
 setopt SHARE_HISTORY
+
+# remove forward slash '/' from wordchars
+export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # aliases
 alias ls='ls --color=auto'
