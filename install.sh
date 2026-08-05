@@ -32,6 +32,9 @@ sudo cp -r .config ~/
 sudo cp -r rules.d /etc/udev/
 sudo cp .zshrc ~/.zshrc
 
+# copy bitwarden sock environment variable
+echo "SSH_AUTH_SOCK=/home/$USER/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock" | sudo tee -a /etc/environment
+
 # source zshrc
 source ~/.zshrc
 

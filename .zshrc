@@ -1,7 +1,9 @@
-# environment variabls
+# Variables
 export EDITOR=nvim
-export PATH=$PATH:~/bin:~/.local/bin
-export SSH_AUTH_SOCK=~/.bitwarden-ssh-agent.sock
+export PATH=$PATH:~/bin:~/.local/bin:~/mod_tools
+export PS3_SDK=/run/media/secrec/easystore/ModsnStuff/P5_Modding_maybe/modding_tools/ps3sdk475_lite
+export easystore=/run/media/secrec/easystore
+export repos=/mnt/320GB_HDD/Github
 
 # save history
 HISTFILE=~/.zsh_history
@@ -13,8 +15,8 @@ setopt SHARE_HISTORY
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # aliases
-alias ls='ls --color=auto'
-alias update='topgrade -y'
+#alias ls='ls --color=auto'
+alias update='topgrade -y --disable jetbrains_toolbox'
 
 # keybinds
 bindkey '^H' backward-kill-word
