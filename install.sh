@@ -7,18 +7,18 @@ cd $SCRIPT_DIR
 
 # install packages
 if command -v dnf; then
-    sudo dnf update & sudo dnf install $packages
+    sudo dnf update && sudo dnf install $packages
 elif command -v pacman; then
     sudo pacman -S $packages
 elif command -v apt; then
-    sudo apt update & sudo apt install $packages
+    sudo apt update && sudo apt install $packages
 fi
 
 # Topgrade
 topgrade -y
 
 # set shell to zsh
-sudo chsh -s $(which zsh)
+chsh -s $(which zsh) $USER
 
 # install oh-my-posh and nerdfont
 curl -s https://ohmyposh.dev/install.sh | bash -s
@@ -46,4 +46,4 @@ sudo udevadm trigger
 # sudo ethtool -s enp6s0 wol g
 
 # enable ssh
-sudo systemctl enable --now ssh
+sudo systemctl enable --now sshd
